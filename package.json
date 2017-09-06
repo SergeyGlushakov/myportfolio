@@ -1,5 +1,5 @@
 {
-  "name": "terminal-npm-gulp",
+  "name": "gulp-builder",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
