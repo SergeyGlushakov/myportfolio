@@ -1,37 +1,52 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var del = require('del');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
 
-var paths = {
+// styles 
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+
+// scripts
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js')
+
+const paths = {
+    root: './build',
     styles: {
         src: 'src/styles/**/*.scss',
-        dest: 'assets/styles/'
+        dest: 'build/assets/styles/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
-        dest: 'assets/scripts/'
+        dest: 'build/assets/scripts/'
+    },
+    templates: {
+        src: 'src/templates/**/*.pug',
+        dest: 'build/assets/'
     }
 };
 
+function templates() {
+    return gulp.src('./src/templates/pages/*.pug')
+        .pipe(pug({ pretty: true }))
+        .pipe(gulp.dest(paths.root));
+}
+
 function styles() {
-    return gulp.src(paths.styles.src)
+    return gulp.src('./src/styles/app.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())        
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.styles.dest))
-        .pipe(browserSync.stream());        
+        .pipe(gulp.dest(paths.styles.dest))       
 }
 
 function scripts() {
-    return gulp.src(paths.scripts.src)
-        .pipe(uglify())
-        .pipe(concat('main.min.js'))
+    return gulp.src('src/scripts/app.js')
+        .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
@@ -42,29 +57,31 @@ function clean() {
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.templates.src, templates);
 }
 
-function serve() {
+function server() {
     browserSync.init({
-        server: {
-            baseDir: "./"    
-        }
+        server: paths.root   
     });
-    browserSync.watch(['./*.html', './assets/**/*.*'], browserSync.reload);
+    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
+function images() {
+    return gulp.src('./src/images/**/*.*')
+          .pipe(gulp.dest(paths.root + '/assets/img'));
+}
+
+exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
-exports.clean = clean;
+exports.templates = templates;
+exports.images = images;
 exports.watch = watch;
-
-gulp.task('build', gulp.series(
-    clean,
-    gulp.parallel(styles, scripts) 
-))
+exports.server = server;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts),
-    gulp.parallel(watch, serve)
+    gulp.parallel(styles, scripts, templates, images),
+    gulp.parallel(watch, server)
 ));
