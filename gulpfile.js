@@ -2,9 +2,11 @@ const gulp = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
-
+const plumber = require('gulp-plumber'); //
+const notify = require('gulp-notify'); //
 // styles 
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -44,6 +46,15 @@ function templates() {
 // scss
 function styles() {
     return gulp.src('./src/styles/app.scss')
+        .pipe(plumber({
+            errorHandler: notify.onError(function (err) {
+                return {title: 'Style', message: err.message}
+            })
+        }))  //
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())        
