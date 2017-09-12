@@ -12,4 +12,7 @@
 #### Webpack
 1. Для работы с javascript используется webpack.
 
+#### Страница проекта 
+
+https://sergeyglushakov.github.io/myportfolio/
 
