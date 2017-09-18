@@ -1,0 +1,23 @@
+
+.auth__wr{
+    min-height: 100vh;
+    background: url(/assets/images/bg/water.jpg) center center no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+}
+
+.auth__header{
+    background: yellow;
+    
+}
+
+.auth__main{
+    background: rgba(18, 38, 40, .6);
+}
+.auth__footer{
+    height: 50px;
+    margin-top: auto;
+   
+
+}

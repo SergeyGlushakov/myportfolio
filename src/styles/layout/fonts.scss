@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'fira_sanslight';
+    src: url('/fonts/firasans-light-webfont.woff2') format('woff2'),
+    url('/fonts/firasans-light-webfont.woff') format('woff'),
+    url('/fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fira_sansregular';
+    src: url('/fonts/firasans-regular-webfont.woff2') format('woff2'),
+    url('/fonts/firasans-regular-webfont.woff') format('woff'),
+    url('/fonts/firasans-regular-webfont.svg#fira_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sansmedium';
+    src: url('/fonts/firasans-medium-webfont.woff2') format('woff2'),
+    url('/fonts/firasans-medium-webfont.woff') format('woff'),
+    url('/fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fira_sansbold';
+    src: url('/fonts/firasans-bold-webfont.woff2') format('woff2'),
+    url('/fonts/firasans-bold-webfont.woff') format('woff'),
+    url('/fonts/firasans-bold-webfont.svg#fira_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('/fonts/opensans-bold-webfont.woff2') format('woff2'),
+    url('/fonts/opensans-bold-webfont.woff') format('woff'),
+    url('/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_semibold';
+    src: url('/fonts/opensanssemibold.woff2') format('woff2'), url('/fonts/opensanssemibold.woff') format('woff'), url('/fonts/opensanssemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

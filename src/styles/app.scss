@@ -1,8 +1,16 @@
-body{
-    margin: 10px;
-    background: #ccc
-}
 
-@import 'common/technologies';
-@import 'common/slider';
-@import 'common/menu';
+
+
+@import 'layout/normalize';
+@import 'layout/adjustment';
+@import 'layout/fonts';
+
+@import 'blocks/auth';
+@import 'blocks/technologies';
+@import 'blocks/slider';
+@import 'blocks/menu';
+
+@import 'media/desktop';
+@import 'media/laptop';
+@import 'media/tablets';
+@import 'media/phones';

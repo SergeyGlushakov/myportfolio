@@ -1,13 +1,34 @@
 extends ../template
 
 block variables
-  - var title = 'Добро пожаловать'
+  - var title = 'Добро пожаловать GS'
 
 block content
-  h1 Главная
-  form
-    label(for="email") 
-    input(name="email" id="email")
-    label(for="password") 
-    input(name="password" id="password")
-    button Войти
+  .wrapper
+    .auth__wr
+      header.auth__header
+        a(href="#", title="Авторизация").auth__btn
+          span.auth__btn-text Авторизация
+
+      main.auth__main
+        .auth__img-user
+          img(src="assets/images/pic/avatar.png").auth__pic
+        .auth__name-user Глушаков Сергей
+        .auth__descr-user Личный сайт веб разработчика
+        ul.socials__list
+          each item in ['vk', 'fb', 'in']
+            li.socials__item
+              a(href="#" class=`socials__item socials__item_${item}`)  
+        nav.nav
+          ul.nav__list
+            li.nav__list-item
+              a.nav__link(href="#") Мои работы
+            li.nav__list-item
+              a.nav__link(href="#") Обо мне  
+            li.nav__list-item
+              a.nav__link(href="#") Блок
+
+      footer.auth__footer
+        .auth__footer-copyright
+          | © Сергей Глушаков | создано с любовью в LoftSchool | 2017
+          

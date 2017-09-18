@@ -6,6 +6,7 @@ const plumber = require('gulp-plumber'); //
 const notify = require('gulp-notify'); //
 // styles 
 const sass = require('gulp-sass');
+const gcmq = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
@@ -33,6 +34,10 @@ const paths = {
     images: {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
+    },
+    fonts: {
+        src: 'src/fonts/**/*.*',
+        dest: 'build/assets/fonts/'
     }
 };
 
@@ -57,6 +62,7 @@ function styles() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gcmq())
         .pipe(sourcemaps.write())        
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))       
@@ -73,6 +79,11 @@ function scripts() {
 function clean() {
     return del(paths.root);
 }
+// просто переносим шрифты
+function fonts() {
+    return gulp.src(paths.fonts.src)
+           .pipe(gulp.dest(paths.fonts.dest));
+}
 
 // просто переносим картинки
 function images() {
@@ -86,6 +97,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
+    gulp.watch(paths.fonts.src, fonts);
 }
 
 // следим за build и релоадим браузер
@@ -104,10 +116,12 @@ exports.templates = templates;
 exports.images = images;
 exports.watch = watch;
 exports.server = server;
+exports.fonts = fonts;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images),
+    gulp.parallel(styles, scripts, templates, images, fonts),
     gulp.parallel(watch, server)
 ));
+
