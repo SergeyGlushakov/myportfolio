@@ -111,7 +111,7 @@ function images() {
 
 // обрабатываем SVG (минифицируем, удаляем атрибуты и т.п.)
 
-gulp.task('sprite', function() {
+function sprite() {
     return gulp.src('/src/images/icons/*.svg')
       // минифицируем svg
       .pipe(svgmin({
@@ -134,7 +134,7 @@ gulp.task('sprite', function() {
       .pipe(replace('&gt;', '>'))
       // build svg sprite
       .pipe(svgSprite(config))
-      .pipe(gulp.dest('/build/temp/icons/'));
+      .pipe(gulp.dest('/build/assets/images/icons/'));
   });
 
 
@@ -165,6 +165,7 @@ exports.images = images;
 exports.watch = watch;
 exports.server = server;
 exports.fonts = fonts;
+exports.sprite = sprite;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
