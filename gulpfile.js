@@ -16,6 +16,13 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js')
 
+// svg 
+
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+
 // для удобства все пути в одном месте
 const paths = {
     root: './build',
@@ -40,6 +47,17 @@ const paths = {
         dest: 'build/assets/fonts/'
     }
 };
+
+const config = {
+    mode: {
+      symbol: {
+        sprite: "../sprite.svg",
+        example: {
+          dest: '../portfolio/build/temp/spriteSvgDemo.html' // демо html
+        }
+      }
+    }
+  };
 
 // pug
 function templates() {
@@ -91,6 +109,35 @@ function images() {
           .pipe(gulp.dest(paths.images.dest));
 }
 
+// обрабатываем SVG (минифицируем, удаляем атрибуты и т.п.)
+
+gulp.task('sprite', function() {
+    return gulp.src('/src/images/icons/*.svg')
+      // минифицируем svg
+      .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
+      }))
+      // удалить все атрибуты fill, style and stroke в фигурах
+      .pipe(cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: {
+          xmlMode: true
+        }
+      }))
+      // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+      .pipe(replace('&gt;', '>'))
+      // build svg sprite
+      .pipe(svgSprite(config))
+      .pipe(gulp.dest('/build/temp/icons/'));
+  });
+
+
 // следим за src и запускаем нужные таски (компиляция и пр.)
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
@@ -107,6 +154,7 @@ function server() {
     });
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
+
 
 // экспортируем функции для доступа из терминала (gulp clean)
 exports.clean = clean;
