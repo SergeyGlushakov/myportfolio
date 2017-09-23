@@ -103,9 +103,7 @@ function fonts() {
 function svgSpriteBuild() {
     return gulp.src(paths.svgIcon.src)
             .pipe(svgmin({
-               js2svg: {
-                   pretty: false
-               }
+               js2svg: {pretty: false}
            }))
            // remove all fill, style and stroke declarations in out shapes
             .pipe(cheerio({
