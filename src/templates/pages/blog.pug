@@ -4,6 +4,72 @@ block variables
   - var title = 'Блог'
 
 block content
-  
+  .wrapper.wrapper_blog
+    section.first-screen.first-screen_about
+      header.first-screen__header
+        ul.socials.socials__header
+          li.socials__iten
+            a.socials__link(href="#") Vk
+              svg.icon.icon_vk
+                use()
+          li.socials__iten
+            a.socials__link(href="#") Git
+              svg.icon.icon_vk
+                use()
+          li.socials__iten
+            a.socials__link(href="#") In
+              svg.icon.icon_vk
+                use()
+        nav.navigation.navigation_header
+          .navigation__trigger
+            a(href="#").navigation__trigger-link
+              svg.icon.icon_hamburger
+                use(xlink:href="/assets/img/sprite/sprite.svg#hamburger")
+            .navigation__wrap
+              ul.navigation__list
+                li.navigation__item
+                  a(href="my-works.html").navigation__link Мои работы
+                li.navigation__item
+                  a(href="about.html").navigation__link Обо мне
+                li.navigation__item
+                  a(href="blog.html").navigation__link Блог
+                li.navigation__item
+                  a(href="index.html").navigation__link Авторизация
+        
+        .first-screen__info.first-screen__info-blog
+          .info__pic
+            img.info__img(src="/", alt="Глушаков Сергей")
+          h1.info__name Глушаков Сергей
+          .info__descr Личный сайт веб-разработчика
+          svg.portfolio-header-img
+            use()
+          a.slide-down(href="#")
+            use()
+          .triangle__wr
+            svg.triangle
+              .triangle__left
+              .triangle__right
 
 
+      section.blog
+        aside.blog__nav.blog__nav_hidden
+          a.blog__trigger(href="#!")
+          ul.blog__list
+            li.blog__item.blog__item_active
+              a(href="#sass").blog__link Самое важное в SASS
+            li.blog__item.blog__item_active
+              a(href="#expedient").blog__link Приёмы в верстке, без которых не обходится не один сайт
+            li.blog__item.blog__item_active
+              a(href="#gulp").blog__link Самый необходимый набор Gulp плагинов
+            li.blog__item.blog__item_active
+              a(href="#pug").blog__link Почему я выбрал Pug
+
+        .blog__articles
+          article.article(id="sass")
+          h3.article__title Самое важное в SASS
+          .article__text
+            p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. 
+            p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.
+            p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.
+            p Далеко-далеко за словесными горами в стране.
+            

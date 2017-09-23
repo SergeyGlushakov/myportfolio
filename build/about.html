@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="wrapper wrapper_about">
-      <section class="first-screen">
+      <section class="first-screen first-screen_about">
         <header class="first-screen__header">
           <ul class="socials socials__header">
             <li class="socials__iten"><a class="socials__link" href="#">Vk
@@ -29,7 +29,21 @@
                   <use></use>
                 </svg></a></li>
           </ul>
-          <nav class="navigation"></nav>
+          <nav class="navigation navigation_header">
+            <div class="navigation__trigger"><a class="navigation__trigger-link" href="#">
+                <svg class="icon icon_hamburger">
+                  <use xlink:href="/assets/img/sprite/sprite.svg#hamburger"></use>
+                </svg></a>
+              <div class="navigation__wrap">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="navigation__link" href="my-works.html">Мои работы</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
           <div class="first-screen__info">
             <div class="info__pic"><img class="info__img" src="/" alt="Глушаков Сергей"></div>
             <h1 class="info__name">Глушаков Сергей</h1>

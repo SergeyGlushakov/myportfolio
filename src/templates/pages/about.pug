@@ -5,7 +5,7 @@ block variables
 
 block content
   .wrapper.wrapper_about
-    section.first-screen
+    section.first-screen.first-screen_about
       header.first-screen__header
         ul.socials.socials__header
           li.socials__iten
@@ -20,8 +20,22 @@ block content
             a.socials__link(href="#") In
               svg.icon.icon_vk
                 use()
-        nav.navigation
-        //- нужно подумать как описать меню по клику на гамбургер
+        nav.navigation.navigation_header
+          .navigation__trigger
+            a(href="#").navigation__trigger-link
+              svg.icon.icon_hamburger
+                use(xlink:href="/assets/img/sprite/sprite.svg#hamburger")
+            .navigation__wrap
+              ul.navigation__list
+                li.navigation__item
+                  a(href="my-works.html").navigation__link Мои работы
+                li.navigation__item
+                  a(href="about.html").navigation__link Обо мне
+                li.navigation__item
+                  a(href="blog.html").navigation__link Блог
+                li.navigation__item
+                  a(href="index.html").navigation__link Авторизация
+        
         .first-screen__info
           .info__pic
             img.info__img(src="/", alt="Глушаков Сергей")
