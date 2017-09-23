@@ -45,19 +45,14 @@ const paths = {
     fonts: {
         src: 'src/fonts/**/*.*',
         dest: 'build/assets/fonts/'
-    }
+    },
+     svgIcon: {
+         src: 'src/images/icons/*.svg',
+         dest: 'build/assets/images/icons/'
+     }
+    
 };
 
-const config = {
-    mode: {
-      symbol: {
-        sprite: "../sprite.svg",
-        example: {
-          dest: '../portfolio/build/temp/spriteSvgDemo.html' // демо html
-        }
-      }
-    }
-  };
 
 // pug
 function templates() {
@@ -103,46 +98,50 @@ function fonts() {
            .pipe(gulp.dest(paths.fonts.dest));
 }
 
+//svg собираем спрайт 
+
+function svgSpriteBuild() {
+    return gulp.src(paths.svgIcon.src)
+            .pipe(svgmin({
+               js2svg: {
+                   pretty: false
+               }
+           }))
+           // remove all fill, style and stroke declarations in out shapes
+            .pipe(cheerio({
+                run: function ($) {
+                    $('[fill]').removeAttr('fill');
+                    $('[stroke]').removeAttr('stroke');
+                    $('[style]').removeAttr('style');
+                },
+                parserOptions: {xmlMode: true}
+            }))
+            // cheerio plugin create unnecessary string '&gt;', so replace it.
+            .pipe(replace('&gt;', '>'))
+            // build svg sprite
+            .pipe(svgSprite({
+                mode: {
+                    symbol: {
+                        sprite: "../sprite.svg"
+                    }
+                }
+            }))
+            .pipe(gulp.dest(paths.svgIcon.dest));
+
+}
+
 // просто переносим картинки
 function images() {
     return gulp.src(paths.images.src)
           .pipe(gulp.dest(paths.images.dest));
 }
 
-// обрабатываем SVG (минифицируем, удаляем атрибуты и т.п.)
-
-function sprite() {
-    return gulp.src('/src/images/icons/*.svg')
-      // минифицируем svg
-      .pipe(svgmin({
-        js2svg: {
-          pretty: true
-        }
-      }))
-      // удалить все атрибуты fill, style and stroke в фигурах
-      .pipe(cheerio({
-        run: function($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: {
-          xmlMode: true
-        }
-      }))
-      // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
-      .pipe(replace('&gt;', '>'))
-      // build svg sprite
-      .pipe(svgSprite(config))
-      .pipe(gulp.dest('/build/assets/images/icons/'));
-  });
-
-
 // следим за src и запускаем нужные таски (компиляция и пр.)
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.svgIcon.src, svgSpriteBuild);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.fonts.src, fonts);
 }
@@ -161,16 +160,16 @@ exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.templates = templates;
+exports.svgSpriteBuild = svgSpriteBuild;
 exports.images = images;
 exports.watch = watch;
 exports.server = server;
 exports.fonts = fonts;
-exports.sprite = sprite;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images, fonts),
+    gulp.parallel(styles, scripts, templates, images, fonts, svgSpriteBuild),
     gulp.parallel(watch, server)
 ));
 

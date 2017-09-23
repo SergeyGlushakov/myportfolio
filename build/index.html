@@ -13,27 +13,38 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="auth__wr">
-        <header class="auth__header"><a class="auth__btn" href="#" title="Авторизация"><span class="auth__btn-text">Авторизация</span></a></header>
-        <main class="auth__main">
-          <div class="auth__img-user"><img class="auth__pic" src="assets/images/pic/avatar.png"></div>
-          <div class="auth__name-user">Глушаков Сергей</div>
-          <div class="auth__descr-user">Личный сайт веб разработчика</div>
-          <ul class="socials__list">
-            <li class="socials__item"><a class="socials__item socials__item_vk" href="#"> </a></li>
-            <li class="socials__item"><a class="socials__item socials__item_fb" href="#"> </a></li>
-            <li class="socials__item"><a class="socials__item socials__item_in" href="#"> </a></li>
+      <div class="welcome-wr">
+        <div class="welcome-header">
+          <button class="welcome-header__btn" href="#" title="Авторизация">Авторизация</button>
+        </div>
+        <main class="welcome">
+          <div class="welcome__user-img"> <img class="welcome__pic" src="/assets/images/pic/avatar.jpg" alt="Глушаков Сергей"></div>
+          <h1 class="welcome__user-name">Глушаков Сергей</h1>
+          <div class="auth__user-descr">Личный сайт веб разработчика</div>
+          <ul class="socials socials_welcome">
+            <li class="socials__item"><a class="socials__link" href="#">Vk
+                <svg class="icon icon_vk">
+                  <use></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="#">Git
+                <svg class="icon icon_git">
+                  <use></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="#">In
+                <svg class="icon icon_in">
+                  <use></use>
+                </svg></a></li>
           </ul>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__list-item"><a class="nav__link" href="#">Мои работы</a></li>
-              <li class="nav__list-item"><a class="nav__link" href="#">Обо мне  </a></li>
-              <li class="nav__list-item"><a class="nav__link" href="#">Блок</a></li>
+          <nav class="block-nav">
+            <ul class="block-nav__list">
+              <li class="block-nav__list-item"><a class="block-nav__link" href="#">Мои работы</a></li>
+              <li class="block-nav__list-item"><a class="block-nav__link" href="#">Обо мне  </a></li>
+              <li class="block-nav__list-item"><a class="block-nav__link" href="#">Блок</a></li>
             </ul>
           </nav>
         </main>
-        <footer class="auth__footer">
-          <div class="auth__footer-copyright">© Сергей Глушаков | создано с любовью в LoftSchool | 2017</div>
+        <footer class="footer footer_welcome">
+          <div class="welcome__footer-copyright">© Сергей Глушаков | создано с любовью в LoftSchool | 2017</div>
         </footer>
       </div>
     </div>

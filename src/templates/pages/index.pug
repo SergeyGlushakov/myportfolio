@@ -5,30 +5,41 @@ block variables
 
 block content
   .wrapper
-    .auth__wr
-      header.auth__header
-        a(href="#", title="Авторизация").auth__btn
-          span.auth__btn-text Авторизация
+    .welcome-wr
+      .welcome-header
+        button.welcome-header__btn(href="#", title="Авторизация") Авторизация
+           
+      main.welcome
+        .welcome__user-img  
+          img.welcome__pic(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+        h1.welcome__user-name Глушаков Сергей
+        .auth__user-descr Личный сайт веб разработчика
 
-      main.auth__main
-        .auth__img-user
-          img(src="assets/images/pic/avatar.png").auth__pic
-        .auth__name-user Глушаков Сергей
-        .auth__descr-user Личный сайт веб разработчика
-        ul.socials__list
-          each item in ['vk', 'fb', 'in']
-            li.socials__item
-              a(href="#" class=`socials__item socials__item_${item}`)  
-        nav.nav
-          ul.nav__list
-            li.nav__list-item
-              a.nav__link(href="#") Мои работы
-            li.nav__list-item
-              a.nav__link(href="#") Обо мне  
-            li.nav__list-item
-              a.nav__link(href="#") Блок
+        ul.socials.socials_welcome
+          li.socials__item
+            a.socials__link(href="#") Vk
+              svg.icon.icon_vk
+                use()
+          li.socials__item
+            a.socials__link(href="#") Git
+              svg.icon.icon_git
+                use()
+          li.socials__item
+            a.socials__link(href="#") In
+              svg.icon.icon_in
+                use()
+        nav.block-nav
+          ul.block-nav__list
+            li.block-nav__list-item
+              a.block-nav__link(href="#") Мои работы
+            li.block-nav__list-item
+              a.block-nav__link(href="#") Обо мне  
+            li.block-nav__list-item
+              a.block-nav__link(href="#") Блок
 
-      footer.auth__footer
-        .auth__footer-copyright
+      //- блок с авторизацией написать после созвона с Максом (надо понять как делать флип)
+
+      footer.footer.footer_welcome
+        .welcome__footer-copyright
           | © Сергей Глушаков | создано с любовью в LoftSchool | 2017
           
