@@ -5,26 +5,26 @@ block variables
 
 block content
   .wrapper.wrapper_about
-    section.first-screen.first-screen_about
+    section.section.first-screen.first-screen_about
       header.first-screen__header
         ul.socials.socials__header
           li.socials__iten
-            a.socials__link(href="#") Vk
+            a.socials__link(href="#")
               svg.icon.icon_vk
-                use()
+                use(xlink:href="/assets/images/icons/sprite.svg#vk")
           li.socials__iten
-            a.socials__link(href="#") Git
+            a.socials__link(href="#")
               svg.icon.icon_vk
-                use()
+                use(xlink:href="/assets/images/icons/sprite.svg#github")
           li.socials__iten
-            a.socials__link(href="#") In
+            a.socials__link(href="#")
               svg.icon.icon_vk
-                use()
+                use(xlink:href="/assets/images/icons/sprite.svg#in")
         nav.navigation.navigation_header
           .navigation__trigger
             a(href="#").navigation__trigger-link
               svg.icon.icon_hamburger
-                use(xlink:href="/assets/img/sprite/sprite.svg#hamburger")
+                use(xlink:href="/assets/images/icons/sprite.svg#hamburger")
             .navigation__wrap
               ul.navigation__list
                 li.navigation__item
@@ -35,30 +35,32 @@ block content
                   a(href="blog.html").navigation__link Блог
                 li.navigation__item
                   a(href="index.html").navigation__link Авторизация
-        
-        .first-screen__info
-          .info__pic
-            img.info__img(src="/", alt="Глушаков Сергей")
-          h1.info__name Глушаков Сергей
-          .info__descr Личный сайт веб-разработчика
-          svg.portfolio-header-img
-            use()
-          a.slide-down(href="#")
-            use()
-          .triangle__wr
-            svg.triangle
-              .triangle__left
-              .triangle__right
 
-    section.about
+        
+      .first-screen__info.first-screen__info_about
+        .info__pic
+          img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+        h1.info__name Глушаков Сергей
+        .info__descr Личный сайт веб-разработчика
+
+      svg.portfolio-header-img
+        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
+      a.slide-down(href="#")
+        use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
+      .triangle__wr
+        svg.triangle
+          .triangle__left
+          .triangle__right
+
+    section.section.about(id="down")
       .about__left
         h2.title.title_about Обо мне
           svg.title__bg.title__bg_about
-            use()
+            use(xlink:href="/assets/images/icons/sprite.svg#about_header")
         .about__info
           .about__pic
-            img.about__img(src="/", alt="Глушаков Сергей")
-            h3.title.title_subtitle Кто я
+            img.about__img(src="/assets/images/pic/about.png", alt="Глушаков Сергей")
+            h3.title.title_sub-about Кто я
             .about__text 
               p Я начинающий веб разработчик из Москвы. Мне 34 года. Мне нравится делать интересные и современные проекты.
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво! 
@@ -139,25 +141,25 @@ block content
             li.contact__item
               a.contacts__link.contakts__link_skype(href="#")
                 svg.icon.icon_skype
-                  use()
+                  use(xlink:href='/assets/images/icons/sprite.svg#skype')
                 .contacts__text
                   | Margo301983
             li.contact__item
               a.contacts__link.contakts__link_mail(href="#")
                 svg.icon.icon_mail
-                  use()
+                  use(xlink:href='/assets/images/icons/sprite.svg#envelope2')
                 .contacts__text
                   | sergey_glushakov@mail.ru
             li.contact__item
               a.contacts__link.contakts__link_phone(href="#")
                 svg.icon.icon_phone
-                  use()
+                  use(xlink:href='/assets/images/icons/sprite.svg#phone')
                 .contacts__text
                   | +79295266240
             li.contact__item
               a.contacts__link.contakts__link_map(href="#")
                 svg.icon.icon_map
-                  use()
+                  use(xlink:href='/assets/images/icons/sprite.svg#map_marker')
                 .contacts__text
                   | Москва, проезд Карамзина д.1
 

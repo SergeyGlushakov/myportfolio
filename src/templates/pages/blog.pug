@@ -5,21 +5,21 @@ block variables
 
 block content
   .wrapper.wrapper_blog
-    section.first-screen.first-screen_about
+    section.first-screen.first-screen_blog
       header.first-screen__header
         ul.socials.socials__header
-          li.socials__iten
-            a.socials__link(href="#") Vk
+          li.socials__item
+            a.socials__link(href="#")
               svg.icon.icon_vk
-                use()
-          li.socials__iten
-            a.socials__link(href="#") Git
-              svg.icon.icon_vk
-                use()
-          li.socials__iten
-            a.socials__link(href="#") In
-              svg.icon.icon_vk
-                use()
+                use(xlink:href="/assets/images/icons/sprite.svg#vk")
+          li.socials__item
+            a.socials__link(href="#")
+              svg.icon.icon_git
+                use(xlink:href="/assets/images/icons/sprite.svg#github")
+          li.socials__item
+            a.socials__link(href="#")
+              svg.icon.icon_in
+                use(xlink:href="/assets/images/icons/sprite.svg#in")
         nav.navigation.navigation_header
           .navigation__trigger
             a(href="#").navigation__trigger-link
@@ -36,22 +36,21 @@ block content
                 li.navigation__item
                   a(href="index.html").navigation__link Авторизация
         
-        .first-screen__info.first-screen__info-blog
+        .first-screen__info.first-screen__info_blog
           .info__pic
-            img.info__img(src="/", alt="Глушаков Сергей")
-          h1.info__name Глушаков Сергей
-          .info__descr Личный сайт веб-разработчика
-          svg.portfolio-header-img
-            use()
-          a.slide-down(href="#")
-            use()
-          .triangle__wr
-            svg.triangle
-              .triangle__left
-              .triangle__right
+            img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+          h2.title.title_blog Блог
+            svg.title.title_bg_blog
+              use(xlink:href="/assets/img/sprite/sprite.svg#blog_header")
+          .info__desc Статьи, которые я написал
+          
+        .triangle__wr
+          svg.triangle
+            .triangle__left
+            .triangle__right
 
 
-      section.blog
+      section.section.blog
         aside.blog__nav.blog__nav_hidden
           a.blog__trigger(href="#!")
           ul.blog__list
