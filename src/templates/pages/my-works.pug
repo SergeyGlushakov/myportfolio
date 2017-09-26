@@ -4,5 +4,172 @@ block variables
   - var title = 'Мои работы'
 
 block content
-  h1 Мои работы 
-  //-include ../common/slider.pug
+  .wrapper.wrapper_common
+    section.section.first-screen.first-screen_works(id='up')
+      header.first-screen__header
+        ul.socials.socials__header
+          li.socials__iten
+            a.socials__link(href="#")
+              svg.icon.icon_vk
+                use(xlink:href="/assets/images/icons/sprite.svg#vk")
+          li.socials__iten
+            a.socials__link(href="#")
+              svg.icon.icon_vk
+                use(xlink:href="/assets/images/icons/sprite.svg#github")
+          li.socials__iten
+            a.socials__link(href="#")
+              svg.icon.icon_vk
+                use(xlink:href="/assets/images/icons/sprite.svg#in")
+        nav.navigation.navigation_header
+          .navigation__trigger
+            a(href="#").navigation__trigger-link
+              svg.icon.icon_hamburger
+                use(xlink:href="/assets/images/icons/sprite.svg#hamburger")
+          .navigation__wrap
+            ul.navigation__list
+              li.navigation__item
+                a(href="my-works.html").navigation__link Мои работы
+              li.navigation__item
+                a(href="about.html").navigation__link Обо мне
+              li.navigation__item
+                a(href="blog.html").navigation__link Блог
+              li.navigation__item
+                a(href="index.html").navigation__link Авторизация
+
+        
+      .first-screen__info.first-screen__info_works
+        .info__pic
+          img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+        h1.info__name Глушаков Сергей
+        .info__descr Личный сайт веб-разработчика
+      svg.portfolio-header-img
+        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
+      a.slide-down(href="#")
+        use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
+      .triangle__wr
+        svg.triangle
+          .triangle__left
+          .triangle__right
+
+    section.section.works
+      h2.title.title_works Мои работы
+        svg.title_bg.title_bg_works
+          use(xlink:href="/assets/images/icons/sprite.svg#works_header")
+      .works__slider(id="down")
+        .slider__left
+          .slider__main
+            ul.slider__list
+              li.slider__item.slider__item_active
+                img.slider__main-img(src="", alt="")
+              li.slider__item.slider__item_active
+                img.slider__main-img(src="", alt="")
+              li.slider__item.slider__item_active
+                img.slider__main-img(src="", alt="")
+          .slider__info
+            ul.slider__info-list
+              li.slider__info-item.active
+                h3.title.title_sub Сайт школы онлайн образования
+                .slider__skills html, css, javascript
+                a.slider__link(href="#")
+                  svg.slider__link-icon
+                    use(xlink:href="/assets/images/icons/sprite.svg#link")
+                  .slider__link-text Посмотреть сайт 
+
+              li.slider__info-item.active
+                h3.title.title_sub Сайт школы онлайн образования
+                .slider__skills html, css, javascript
+                a.slider__link(href="#")
+                  svg.slider__link-icon
+                    use(xlink:href="/assets/images/icons/sprite.svg#link")
+                  .slider__link-text Посмотреть сайт
+
+              li.slider__info-item.active
+                h3.title.title_sub Сайт школы онлайн образования
+                .slider__skills html, css, javascript
+                a.slider__link(href="#")
+                  svg.slider__link-icon
+                    use(xlink:href="/assets/images/icons/sprite.svg#link")
+                  .slider__link-text Посмотреть сайт
+
+        .slider__rignt
+          .slider__controls
+            a.slider__controls-link.slider__controls-link_up(href="#")
+              ul.controls__list
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide2.png" alt="slide")
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide3.png" alt="slide")
+              svg.slider__arrow-up
+                use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_up")
+
+            a.slider__controls-link.slider__controls-link_down(href="#")
+              ul.controls__list
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+                li.controls__item
+                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+              svg.slider__arrow-down
+                use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_down")
+
+    section.section.calls
+      .calls__bg
+        img.calls__bg-img(src="/assets/images/review.jpg", alt="ground")
+      h2.title.title_talks Что обо мне говорят
+        svg.title__bg.title__bg_about
+          use()
+
+      .review
+        ul.reviews__list
+          li.review__item
+            .review__photo
+              img(src="/assets/images/kovaldmitry.jpg", alt="Kovalchuk Dmitry").review__img
+            blockquote.review__quote
+              review__text
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                svg.review__text-bg
+                  use(xlink:href="/assets/images/icons/sprite.svg#quote")
+              footer.review__author
+                .review__name Ковальчук Дмитрий
+                .review__position - основатель Loftschool    
+
+          li.review__item
+            .review__photo
+              img(src="/assets/images/sabvladimir.jpg", alt="Sabancev Vladimir").review__img
+            blockquote.review__quote
+              review__text
+                p Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                svg.review__text-bg
+                  use(xlink:href="/assets/images/icons/sprite.svg#quote")
+              footer.review__author
+                .review__name Сабанцев Владимир
+                .review__position - преподаватель
+
+            
+      form.feedback
+        .validation
+          .validation__text Введите текст
+          a.validation__close(href="#1") X
+
+        .blur
+        .feedback__wrap
+          h3.title.title_sub Связаться со мной
+          input.feedback__input.feedback__input_name(type="text", placeholder="Имя")
+          input.feedback__input.feedback__input_email(type="text", placeholder="Email")
+          textarea.feedback__area(placeholder="Ваше сообщение")
+        .block-nav.block-nav_feedback
+          ul.block-nav__list.block-nav__list_log
+            li.block-nav__item.block-nav__item_log
+              button.block-nav__btn(type="submit") Отправить
+            li.block-nav__item.block-nav__item_log
+              button.block-nav__btn(type="reset") Очистить
+
+        a.slide_up(href="#up")
+          svg.icon.icon_slide-up
+            use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_up")
+
+        include ../common/footer.pug 
+  
