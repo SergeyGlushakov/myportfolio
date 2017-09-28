@@ -1,56 +1,79 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+
+
 @font-face {
-    font-family: 'fira_sanslight';
-    src: url('/fonts/firasans-light-webfont.woff2') format('woff2'),
-    url('/fonts/firasans-light-webfont.woff') format('woff'),
-    url('/fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'fira_sansregular';
-    src: url('/fonts/firasans-regular-webfont.woff2') format('woff2'),
-    url('/fonts/firasans-regular-webfont.woff') format('woff'),
-    url('/fonts/firasans-regular-webfont.svg#fira_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.eot');
+	src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/Roboto-Medium.woff') format('woff'),
+		url('../fonts/Roboto-Medium.ttf') format('truetype'),
+		url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'fira_sansmedium';
-    src: url('/fonts/firasans-medium-webfont.woff2') format('woff2'),
-    url('/fonts/firasans-medium-webfont.woff') format('woff'),
-    url('/fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.eot');
+	src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Light.woff2') format('woff2'),
+		url('../fonts/Roboto-Light.woff') format('woff'),
+		url('../fonts/Roboto-Light.ttf') format('truetype'),
+		url('../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
 }
+
+
 @font-face {
-    font-family: 'fira_sansbold';
-    src: url('/fonts/firasans-bold-webfont.woff2') format('woff2'),
-    url('/fonts/firasans-bold-webfont.woff') format('woff'),
-    url('/fonts/firasans-bold-webfont.svg#fira_sansbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('/fonts/fontawesome-webfont.eot?v=4.7.0');
-    src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.eot');
+	src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff'),
+		url('../fonts/Roboto-Bold.ttf') format('truetype'),
+		url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'open_sansbold';
-    src: url('/fonts/opensans-bold-webfont.woff2') format('woff2'),
-    url('/fonts/opensans-bold-webfont.woff') format('woff'),
-    url('/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff'),
+		url('../fonts/Roboto-Regular.ttf') format('truetype'),
+		url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
-}
 @font-face {
-    font-family: 'open_semibold';
-    src: url('/fonts/opensanssemibold.woff2') format('woff2'), url('/fonts/opensanssemibold.woff') format('woff'), url('/fonts/opensanssemibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+	font-family: 'Sansus';
+	src: url('../fonts/SansusWebissimo.eot');
+	src: url('../fonts/SansusWebissimo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SansusWebissimo.woff2') format('woff2'),
+		url('../fonts/SansusWebissimo.woff') format('woff'),
+		url('../fonts/SansusWebissimo.ttf') format('truetype'),
+		url('../fonts/SansusWebissimo.svg#SansusWebissimo') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+// @font-face {
+// 	font-family: 'FontAwesome';
+// 	src: url('FontAwesome.eot');
+// 	src: url('FontAwesome.eot?#iefix') format('embedded-opentype'),
+// 		url('FontAwesome.woff2') format('woff2'),
+// 		url('FontAwesome.woff') format('woff'),
+// 		url('FontAwesome.ttf') format('truetype'),
+// 		url('FontAwesome.svg#FontAwesome') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+

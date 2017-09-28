@@ -1,0 +1,99 @@
+.welcome-wr{
+    min-height: 100vh;
+    background: url('/assets/images/bg/water.jpg') center center no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.welcome-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: rem(39px);
+    padding-right: rem(100px);
+
+}
+
+.welcome-header__btn{
+    font-size: rem(16px);
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #fff;
+    border-radius: rem(20px);
+    background-color: transparent;
+    border: 1px solid #fff;
+    height: rem(45px) ;
+    width: rem(180px) ;
+    transition: .3s;
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+    }
+}
+
+.welcome {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+.welcome__user-wrap{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(#122620, .6);
+    width: rem(380px);
+    min-height: rem(395px);
+    overflow: hidden;
+    border-radius: rem(5px);
+    align-items: center;
+  
+
+}
+.welcome__user-img{
+    display: flex;
+    width: 141px;
+    height: 141px;
+    margin-top: rem(40px);
+    margin-bottom: rem(20px);
+
+}
+.welcome__pic{
+    border-radius: 50%;
+    width: 100%;
+
+}
+.welcome__user-name,.auth__user-descr {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+.welcome__user-name {
+    font-weight: 500;
+}
+
+.welcome__user-descr {
+    font-weight: 400;
+}
+
+.socials_welcome{
+    display: flex;
+    align-items: center;
+}
+.footer_welcome{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: rem(39px);
+}
+
+.welcome__footer-copyright {
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #fff;
+}
+
+

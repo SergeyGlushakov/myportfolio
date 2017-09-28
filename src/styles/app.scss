@@ -1,15 +1,17 @@
 
 
+
+$green : #4e8839;
+$light-green: #6c9c5a;
+$gray: #373e42;
+$light-gray: #566358;
+
+@import 'layout/mixins';
 @import 'layout/normalize';
 @import 'layout/adjustment';
 @import 'layout/fonts';
-
-
-@import 'blocks/welcome';
-@import 'blocks/technologies';
-@import 'blocks/slider';
-@import 'blocks/menu';
-
+@import 'common/socials';
+@import 'blocks/welcom';
 @import 'media/desktop';
 @import 'media/laptop';
 @import 'media/tablets';

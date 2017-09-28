@@ -48,9 +48,9 @@ block content
       a.slide-down(href="#")
         use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
       .triangle__wr
-        svg.triangle
-          .triangle__left
-          .triangle__right
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
+          polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left
+          polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right
 
     section.section.about(id="down")
       .about__left
@@ -164,7 +164,7 @@ block content
                   | Москва, проезд Карамзина д.1
 
                   
-    include ../common/footer.pug 
+    include ../common/footer.pug  
       
         
       

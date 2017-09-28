@@ -1,0 +1,30 @@
+//socials
+
+.socials__link{
+    display: flex;
+    .icon{
+        fill: #fff;
+    }
+    &:hover {
+        .icon{
+            fill: $green;
+        }
+    }
+}
+
+.icon {
+    transition: .3s;
+  }
+  .icon_vk {
+    width: rem(31px);
+    height: rem(17px);
+  }
+  .icon_git {
+    width: rem(26px);
+    height: rem(22px);
+  }
+  .icon_in {
+    height: rem(22px);
+    width: rem(24px);
+  
+  }
