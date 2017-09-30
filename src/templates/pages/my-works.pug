@@ -117,10 +117,10 @@ block content
 
     section.section.calls
       .calls__bg
-        img.calls__bg-img(src="/assets/images/review.jpg", alt="ground")
+        img.calls__bg-img(src="/assets/images/review.png", alt="ground")
       h2.title.title_talks Что обо мне говорят
         svg.title__bg.title__bg_about
-          use()
+          use(xlink:href="/assets/images/icons/sprite.svg#about_header")
 
       .review
         ul.reviews__list
@@ -150,10 +150,6 @@ block content
 
             
       form.feedback
-        .validation
-          .validation__text Введите текст
-          a.validation__close(href="#1") X
-
         .blur
         .feedback__wrap
           h3.title.title_sub Связаться со мной
