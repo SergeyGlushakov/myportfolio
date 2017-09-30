@@ -5,7 +5,7 @@
     .icon{
         fill: #fff;
     }
-    &:hover {
+    &:hover, :link {
         .icon{
             fill: $green;
         }
@@ -29,4 +29,15 @@
   
   }
 
- 
+
+.socials_welcome {
+      display: flex;
+      align-items: center;
+      margin: auto;
+  }
+
+.socials__item {
+    
+}
+
+.socials__item:not(:last-child) { margin-right: 20px;}
