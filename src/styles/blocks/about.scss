@@ -1,0 +1,16 @@
+.about {
+    background: yellowgreen;
+    display: flex;
+}
+
+.about__left, .about__right {
+    flex: 1;
+}
+
+.about__left {
+    background-color: #ebefe2;
+}
+
+.about__right {
+    background-color: #f4f5f0;
+}

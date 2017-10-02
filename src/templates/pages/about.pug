@@ -8,18 +8,19 @@ block content
     section.section.first-screen.first-screen_about
       header.first-screen__header
         ul.socials.socials__header
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
               svg.icon.icon_vk
                 use(xlink:href="/assets/images/icons/sprite.svg#vk")
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
               svg.icon.icon_vk
                 use(xlink:href="/assets/images/icons/sprite.svg#github")
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
               svg.icon.icon_vk
                 use(xlink:href="/assets/images/icons/sprite.svg#in")
+
         nav.navigation.navigation_header
           .navigation__trigger
             a(href="#").navigation__trigger-link
@@ -36,24 +37,28 @@ block content
                 li.navigation__item
                   a(href="index.html").navigation__link Авторизация
 
-        
+      svg.works-header-img
+        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
+
       .first-screen__info.first-screen__info_about
         .info__pic
           img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
         h1.info__name Глушаков Сергей
         .info__descr Личный сайт веб-разработчика
 
-      svg.portfolio-header-img
-        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
       a.slide-down(href="#")
-        use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
-      .triangle__wr
-        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
-          polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left
-          polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right
+        svg.icon.icon_slide-down
+          use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
+
+      //- .triangle__wr
+      //-   svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
+      //-     polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left
+      //-     polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right
 
     section.section.about(id="down")
       .about__left
+        svg(viewbox="0 0 1000 100" preserveaspectratio="none").triangle
+          polygon(points="0,0   0,86   1000,86  1000,75").triangle__left
         h2.title.title_about Обо мне
           svg.title__bg.title__bg_about
             use(xlink:href="/assets/images/icons/sprite.svg#about_header")
@@ -66,6 +71,8 @@ block content
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво! 
 
       .about__right
+        svg(viewbox="0 0 1000 85" preserveaspectratio="none").triangle
+          polygon(points="0,0   0,86   1000,86  1000,75").triangle__right
         .skills
         h3.title.title_sub-about Чем я могу быть вам полезен
         .skills__desc

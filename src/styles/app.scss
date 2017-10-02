@@ -1,16 +1,21 @@
-
+/*colors*/
 $green : #4e8839;
 $light-green: #6c9c5a;
 $gray: #373e42;
 $light-gray: #566358;
+$bg-color: #f8f9f5;
 
-@import 'layout/mixins';
-@import 'layout/normalize';
-@import 'layout/adjustment';
-@import 'layout/fonts';
-@import 'common/socials';
-@import 'blocks/welcome';
-@import 'media/desktop';
-@import 'media/laptop';
-@import 'media/tablets';
-@import 'media/phones';
+@import "layout/mixins";
+@import "layout/normalize";
+@import "layout/adjustment";
+@import "layout/fonts";
+@import "common/triangle";
+@import "common/socials";
+@import "blocks/footer";
+@import "blocks/welcome";
+@import "blocks/first-screen";
+@import "blocks/about";
+@import "media/desktop";
+@import "media/laptop";
+@import "media/tablets";
+@import "media/phones";
