@@ -1,13 +1,52 @@
 extends ../template
 
 block variables
-  - var title = 'Добро пожаловать'
+  - var title = 'Добро пожаловать GS'
 
 block content
-  h1 Главная
-  form
-    label(for="email") 
-    input(name="email" id="email")
-    label(for="password") 
-    input(name="password" id="password")
-    button Войти
+  .wrapper
+    .welcome-wr
+      .welcome-header
+        button.welcome-header__btn(type="submit") Авторизация
+           
+      main.welcome
+        .welcome__user-wrap
+          .welcome__user-img  
+            img.welcome__pic(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+          h1.welcome__user-name Глушаков Сергей
+          .welcome__user-descr Личный сайт веб разработчика
+
+
+          ul.socials.socials_welcome
+            li.socials__item
+              a.socials__link(href="#")
+                svg.icon.icon_vk
+                  use(xlink:href="/assets/images/icons/sprite.svg#vk")
+            li.socials__item
+              a.socials__link(href="#")
+                svg.icon.icon_git
+                  use(xlink:href="/assets/images/icons/sprite.svg#github")
+            li.socials__item
+              a.socials__link(href="#")
+                svg.icon.icon_in
+                  use(xlink:href="/assets/images/icons/sprite.svg#in")
+
+
+          nav.block-nav
+            ul.block-nav__list
+              li.block-nav__item
+                a.block-nav__link(href="my-works.html")
+                  span.block-nav__link-text Мои работы
+              li.block-nav__item
+                  a.block-nav__link(href="about.html")
+                    span.block-nav__link-text Обо мне  
+              li.block-nav__item
+                a.block-nav__link(href="blog.html")
+                  span.block-nav__link-text Блог
+
+      //- блок с авторизацией написать после созвона с Максом (надо понять как делать флип)
+
+      footer.footer.footer_welcome
+        .welcome__footer-copyright
+          | © Сергей Глушаков | создано с любовью в LoftSchool | 2017
+          

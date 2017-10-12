@@ -1,0 +1,23 @@
+.map {
+    background-image: url('/assets/images/map_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.map__wr {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 21%;
+    z-index: 5;
+}
+
+
+

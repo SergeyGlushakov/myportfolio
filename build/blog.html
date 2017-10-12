@@ -3,35 +3,153 @@
   <head>
     <meta charset="utf-8">
     <title>Блог</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="Глушаков Сергей" name="author">
+    <meta content="Frontent разработчик" name="description">
+    <meta content="Frontend, web-development" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="/assets/styles/app.min.css">
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Блог</h1>
-    <ul>
-      <li>
-        <h2>Заголовок статьи</h2>
-        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
-      </li>
-      <li>
-        <h2>Ещё статья</h2>
-        <p>Далеко-далеко за словесными горами в стране.</p>
-      </li>
-      <li>
-        <h2>Последняя статья</h2>
-        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Курсивных то осталось за.</p>
-      </li>
-    </ul>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/my-works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
+    <div class="wrapper wrapper_blog">
+      <section class="first-screen first-screen_blog">
+        <header class="first-screen__header">
+          <ul class="socials socials__header">
+            <li class="socials__item"><a class="socials__link" href="#">
+                <svg class="icon icon_vk">
+                  <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="#">
+                <svg class="icon icon_git">
+                  <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="#">
+                <svg class="icon icon_in">
+                  <use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <nav class="navigation navigation_header">
+            <div class="navigation__trigger"><a class="navigation__trigger-link" href="#">
+                <svg class="icon icon_hamburger">
+                  <use xlink:href="/assets/images/icons/sprite.svg#hamburger"></use>
+                </svg></a>
+              <div class="navigation__wrap">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="navigation__link" href="my-works.html">Мои работы</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="first-screen__info first-screen__info_blog">
+            <div class="info__pic"><img class="info__img" src="/assets/images/pic/avatar.jpg" alt="Глушаков Сергей"></div>
+            <h2 class="title title_blog">Блог</h2>
+            <div class="info__desc">Статьи, которые я написал</div>
+          </div>
+        </header>
+      </section>
+      <section class="section blog">
+        <div class="triangle__wr">
+          <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="triangle__left triangle__left-white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="triangle__right triangle__right-white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+          </svg>
+        </div>
+        <aside class="blog__nav blog__nav_hidden"><a class="blog__trigger" href="#!"></a>
+          <ul class="blog__list">
+            <li class="blog__item blog__item_active"><a class="blog__link" href="#sass"><span class="blog__link-text">Самое важное в SASS</span></a></li>
+            <li class="blog__item"><a class="blog__link" href="#expedient"><span class="blog__link-text">Приёмы в верстке, без которых не обходится не один сайт</span></a></li>
+            <li class="blog__item"><a class="blog__link" href="#gulp"><span class="blog__link-text">Самый необходимый набор Gulp плагинов</span></a></li>
+            <li class="blog__item"><a class="blog__link" href="#pug"><span class="blog__link-text">Почему я выбрал Pug</span></a></li>
+          </ul>
+        </aside>
+        <div class="blog__articles">
+          <article class="article" id="sass">
+            <h3 class="article__title">Самое важное в SASS</h3>
+            <div class="article__date">22 ноября 2016</div>
+            <div class="article__text">
+              <p>Практический опыт показывает, что выбранный нами инновационный путь представляет собой интересный эксперимент проверки новых предложений. Равным образом постоянное информационно-техническое обеспечение нашей деятельности играет важную роль в формировании экономической целесообразности принимаемых решений! Дорогие друзья, новая модель организационной деятельности влечет за собой процесс внедрения и модернизации ключевых компонентов планируемого обновления.</p>Значимость этих проблем настолько очевидна, что постоянное информационно-техническое обеспечение нашей деятельности позволяет оценить значение форм воздействия.
+              <p>Равным образом сложившаяся структура организации требует от нас анализа дальнейших направлений развития проекта! Равным образом новая модель организационной деятельности требует определения и уточнения всесторонне сбалансированных нововведений. Практический опыт показывает, что консультация с профессионалами из IT влечет за собой процесс внедрения и модернизации модели развития?</p>
+            </div>
+          </article>
+          <article class="article" id="expedient">
+            <h3 class="article__title">Приёмы в верстке, без которых не обходится не один сайт</h3>
+            <div class="article__date">21 ноября 2016</div>
+            <div class="article__text"></div>
+            <p>Значимость этих проблем настолько очевидна, что выбранный нами инновационный путь обеспечивает актуальность новых предложений. Задача организации, в особенности же консультация с профессионалами из IT способствует повышению актуальности экономической целесообразности принимаемых решений! Равным образом новая модель организационной деятельности играет важную роль в формировании дальнейших направлений развития проекта. Задача организации, в особенности же новая модель организационной деятельности требует от нас системного анализа дальнейших направлений развития проекта. Дорогие друзья, курс на социально-ориентированный национальный проект требует от нас системного анализа форм воздействия.</p>
+          </article>
+          <article class="article" id="gulp">
+            <h3 class="article__title">Самый необходимый набор Gulp плагинов</h3>
+            <div class="article__date">20 ноября 2016</div>
+            <div class="article__text">
+              <p>С другой стороны постоянное информационно-техническое обеспечение нашей деятельности способствует подготовке и реализации форм воздействия. С другой стороны дальнейшее развитие различных форм деятельности играет важную роль в формировании экономической целесообразности принимаемых решений? Значимость этих проблем настолько очевидна, что консультация с профессионалами из IT способствует подготовке и реализации позиций, занимаемых участниками в отношении поставленных задач? Повседневная практика показывает, что постоянное информационно-техническое обеспечение нашей деятельности играет важную роль в формировании форм воздействия. Значимость этих проблем настолько очевидна, что повышение уровня гражданского сознания представляет собой интересный эксперимент проверки существующих финансовых и административных условий?</p>
+              <p>Повседневная практика показывает, что постоянное информационно-техническое обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития проекта. Повседневная практика показывает, что повышение уровня гражданского сознания требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач! Не следует, однако, забывать о том, что дальнейшее развитие различных форм деятельности играет важную роль в формировании новых предложений! Таким образом, курс на социально-ориентированный национальный проект создаёт предпосылки качественно новых шагов для форм воздействия. Разнообразный и богатый опыт сложившаяся структура организации напрямую зависит от направлений прогрессивного развития. Равным образом выбранный нами инновационный путь играет важную роль в формировании направлений прогрессивного развития.</p>
+            </div>
+          </article>
+          <article class="article" id="pug">
+            <h3 class="article__title">Почему я выбрал Pug</h3>
+            <div class="article__date">18 ноября 2016</div>
+            <div class="article__text">
+              <p>Таким образом, дальнейшее развитие различных форм деятельности требует от нас анализа системы масштабного изменения ряда параметров. Равным образом реализация намеченного плана развития требует от нас анализа форм воздействия! Дорогие друзья, выбранный нами инновационный путь требует от нас системного анализа экономической целесообразности принимаемых решений. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требует от нас системного анализа форм воздействия.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="footer__blog">
+        <footer class="section__footer">
+          <div class="footer__top">
+            <div class="footer__left">
+              <div class="footer__left-descr">
+                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+              </div>
+            </div>
+            <div class="footer__center">
+              <div class="footer-navigation">
+                <ul class="footer-navigation__list">
+                  <li class="footer-navigation__item"><a class="footer-navigation__link" href="my-works.html">
+                      <div class="footer-navigation__link-text">Мои работы</div></a></li>
+                  <li class="footer-navigation__item"><a class="footer-navigation__link" href="about.html">
+                      <div class="footer-navigation__link-text">Обо мне</div></a></li>
+                  <li class="footer-navigation__item"><a class="footer-navigation__link" href="blog.html">
+                      <div class="footer-navigation__link-text">Блог</div></a></li>
+                  <li class="footer-navigation__item"><a class="footer-navigation__link" href="index.html">
+                      <div class="footer-navigation__link-text">Авторизация</div></a></li>
+                </ul>
+                <ul class="socials socials_footer">
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="icon icon_vk">
+                        <use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="icon icon_git">
+                        <use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="icon icon_in">
+                        <use xlink:href="/assets/images/icons/sprite.svg#in">                    </use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__right">
+              <div class="footer__blockquote">
+                <blockquote class="blockquote">
+                  <div class="blockquote__text">
+                    <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
+                    <cite class="blockquote__author">- Martin Golding</cite>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="welcome__footer-copyright">© Сергей Глушаков | создано с любовью в LoftSchool | 2017</div>
+          </div>
+        </footer>
+      </section>
+    </div>
   </body>
 </html>

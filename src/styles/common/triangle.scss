@@ -1,0 +1,21 @@
+
+.triangle{
+    height: 100px; 
+    width: 100%;
+    position: absolute;
+    bottom: 100%; 
+    left: 0;
+    right: 0;
+}
+.triangle__left {
+    width: 50%;
+    fill: #ebefe2;    
+}
+.triangle__right {
+    width: 50%;
+    fill: #f4f5f0;
+}
+
+.triangle__left-white,.triangle__right-white{
+    fill: #faf8f0;
+}

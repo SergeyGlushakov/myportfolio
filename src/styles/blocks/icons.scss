@@ -1,0 +1,41 @@
+
+
+.icon_hamburger {
+    width: rem(41px);
+    height: rem(36px);
+    fill: #fff;
+  }
+
+
+.icon_skype {
+    width: rem(24px);
+    height: rem(24px);
+}
+
+.icon_mail {
+    width: rem(23px);
+    height: rem(16px);
+}
+
+.icon_phone {
+    width: rem(17px);
+    height: rem(20px);
+}
+
+.icon_map {
+    width: rem(16px);
+    height: rem(21px);
+}
+
+.icon_slide-down {
+    width: rem(26px);
+    height: rem(16px);
+    fill: rgba(#fff, .7);
+  }
+
+  .icon_skype,
+  .icon_mail,
+  .icon_phone,
+  .icon_map{
+      margin-right: 10px;
+  }
