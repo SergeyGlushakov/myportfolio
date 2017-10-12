@@ -5,95 +5,111 @@ block variables
 
 block content
   .wrapper.wrapper_common
-    section.section.first-screen.first-screen_works(id='up')
+    section.section.first-screen.first-screen_about
       header.first-screen__header
         ul.socials.socials__header
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
               svg.icon.icon_vk
                 use(xlink:href="/assets/images/icons/sprite.svg#vk")
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
-              svg.icon.icon_vk
+              svg.icon.icon_git
                 use(xlink:href="/assets/images/icons/sprite.svg#github")
-          li.socials__iten
+          li.socials__item
             a.socials__link(href="#")
-              svg.icon.icon_vk
+              svg.icon.icon_in
                 use(xlink:href="/assets/images/icons/sprite.svg#in")
+
         nav.navigation.navigation_header
           .navigation__trigger
             a(href="#").navigation__trigger-link
               svg.icon.icon_hamburger
                 use(xlink:href="/assets/images/icons/sprite.svg#hamburger")
-          .navigation__wrap
-            ul.navigation__list
-              li.navigation__item
-                a(href="my-works.html").navigation__link Мои работы
-              li.navigation__item
-                a(href="about.html").navigation__link Обо мне
-              li.navigation__item
-                a(href="blog.html").navigation__link Блог
-              li.navigation__item
-                a(href="index.html").navigation__link Авторизация
+            .navigation__wrap
+              ul.navigation__list
+                li.navigation__item
+                  a(href="my-works.html").navigation__link Мои работы
+                li.navigation__item
+                  a(href="about.html").navigation__link Обо мне
+                li.navigation__item
+                  a(href="blog.html").navigation__link Блог
+                li.navigation__item
+                  a(href="index.html").navigation__link Авторизация
 
+      svg.works-header-img
+        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
+
+      .first-screen__info.first-screen__info_about
+        .info__pic
+          img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
+        h1.info__name Глушаков Сергей
+        .info__descr Личный сайт веб-разработчика
+
+      a.slide-down(href="#")
+        svg.icon.icon_slide-down
+          use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
         
       .first-screen__info.first-screen__info_works
         .info__pic
           img.info__img(src="/assets/images/pic/avatar.jpg", alt="Глушаков Сергей")
         h1.info__name Глушаков Сергей
         .info__descr Личный сайт веб-разработчика
-      svg.portfolio-header-img
-        use(xlink:href="/assets/images/icons/sprite.svg#portfolio_header")
+      
       a.slide-down(href="#")
         svg.icon.icon_slide-down
           use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
-      .triangle__wr
-        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
-            polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left
-            polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right
 
+ 
     section.section.works
+     
+      svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
+            polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left.triangle__left-white
+            polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right.triangle__right-white
+      
       h2.title.title_works Мои работы
-        svg.title_bg.title_bg_works
-          use(xlink:href="/assets/images/icons/sprite.svg#works_header")
+        //- svg.title_bg.title_bg_works
+        //-   use(xlink:href="/assets/images/icons/sprite.svg#works_header")
       .works__slider(id="down")
+
         .slider__left
           .slider__main
             ul.slider__list
               li.slider__item.slider__item_active
+                img.slider__main-img(src="")
+              li.slider__item
                 img.slider__main-img(src="", alt="")
-              li.slider__item.slider__item_active
-                img.slider__main-img(src="", alt="")
-              li.slider__item.slider__item_active
+              li.slider__item
                 img.slider__main-img(src="", alt="")
           .slider__info
             ul.slider__info-list
               li.slider__info-item.active
-                h3.title.title_sub Сайт школы онлайн образования
+                h3.title.title_sub Сайт школы онлайн образования 1
                 .slider__skills html, css, javascript
                 a.slider__link(href="#")
                   svg.slider__link-icon
                     use(xlink:href="/assets/images/icons/sprite.svg#link")
                   .slider__link-text Посмотреть сайт 
 
-              li.slider__info-item.active
-                h3.title.title_sub Сайт школы онлайн образования
-                .slider__skills html, css, javascript
-                a.slider__link(href="#")
-                  svg.slider__link-icon
-                    use(xlink:href="/assets/images/icons/sprite.svg#link")
-                  .slider__link-text Посмотреть сайт
+              //- li.slider__info-item
+              //-   h3.title.title_sub Сайт школы онлайн образования 2
+              //-   .slider__skills html, css, javascript
+              //-   a.slider__link(href="#")
+              //-     svg.slider__link-icon
+              //-       use(xlink:href="/assets/images/icons/sprite.svg#link")
+              //-     .slider__link-text Посмотреть сайт
 
-              li.slider__info-item.active
-                h3.title.title_sub Сайт школы онлайн образования
-                .slider__skills html, css, javascript
-                a.slider__link(href="#")
-                  svg.slider__link-icon
-                    use(xlink:href="/assets/images/icons/sprite.svg#link")
-                  .slider__link-text Посмотреть сайт
+              //- li.slider__info-item
+              //-   h3.title.title_sub Сайт школы онлайн образования 3
+              //-   .slider__skills html, css, javascript
+              //-   a.slider__link(href="#")
+              //-     svg.slider__link-icon
+              //-       use(xlink:href="/assets/images/icons/sprite.svg#link")
+              //-     .slider__link-text Посмотреть сайт
 
-        .slider__rignt
+        .slider__right
           .slider__controls
+
             a.slider__controls-link.slider__controls-link_up(href="#")
               ul.controls__list
                 li.controls__item
@@ -102,6 +118,8 @@ block content
                   img.slider__img(src="/assets/images/slide2.png" alt="slide")
                 li.controls__item
                   img.slider__img(src="/assets/images/slide3.png" alt="slide")
+
+
               svg.slider__arrow-up
                 use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_up")
 
@@ -110,15 +128,17 @@ block content
                 li.controls__item
                   img.slider__img(src="/assets/images/slide1.png" alt="slide")
                 li.controls__item
-                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+                  img.slider__img(src="/assets/images/slide2.png" alt="slide")
                 li.controls__item
-                  img.slider__img(src="/assets/images/slide1.png" alt="slide")
+                  img.slider__img(src="/assets/images/slide3.png" alt="slide")
+
+
               svg.slider__arrow-down
                 use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_down")
 
     section.section.calls
-      .calls__bg
-        img.calls__bg-img(src="/assets/images/review.png", alt="ground")
+      //- .calls__bg
+        //- img.calls__bg-img(src="/assets/images/review.png", alt="ground")
       h2.title.title_talks Что обо мне говорят
         svg.title__bg.title__bg_about
           use(xlink:href="/assets/images/icons/sprite.svg#about_header")
@@ -157,6 +177,7 @@ block content
           input.feedback__input.feedback__input_name(type="text", placeholder="Имя")
           input.feedback__input.feedback__input_email(type="text", placeholder="Email")
           textarea.feedback__area(placeholder="Ваше сообщение")
+          
         .block-nav.block-nav_feedback
           ul.block-nav__list.block-nav__list_log
             li.block-nav__item.block-nav__item_log
@@ -169,4 +190,5 @@ block content
             use(xlink:href="/assets/images/icons/sprite.svg#portf_arrow_up")
 
         include ../common/footer.pug 
-  
+    section.footer__works
+      include ../common/footer.pug

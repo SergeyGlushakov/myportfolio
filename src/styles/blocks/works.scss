@@ -1,0 +1,13 @@
+.works {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: 65px;
+}
+
+.calls{
+    min-width: 650px;
+    height: 100vh;
+    background: url('/assets/images/review.png') center center no-repeat;
+}
+

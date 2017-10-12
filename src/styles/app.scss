@@ -4,17 +4,36 @@ $light-green: #6c9c5a;
 $gray: #373e42;
 $light-gray: #566358;
 $bg-color: #f8f9f5;
+$main-font-color: #373e42;
+$light-white: #f4f5f0;
+$subtitle-color: #566358;
+$articles-color:#455a64;
 
 @import "layout/mixins";
 @import "layout/normalize";
 @import "layout/adjustment";
 @import "layout/fonts";
-@import "common/triangle";
-@import "common/socials";
-@import "blocks/footer";
+
 @import "blocks/welcome";
+@import "blocks/works";
+@import "blocks/slider";
+@import "blocks/calls";
 @import "blocks/first-screen";
 @import "blocks/about";
+@import "blocks/aboutSkills";
+@import "blocks/title";
+@import "blocks/icons";
+@import "blocks/contacts";
+@import "blocks/map";
+@import "blocks/blog";
+
+@import "blocks/footer";
+
+
+@import "common/triangle";
+@import "common/helpcolor";
+@import "common/socials";
+
 @import "media/desktop";
 @import "media/laptop";
 @import "media/tablets";

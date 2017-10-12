@@ -1,0 +1,119 @@
+.wrapper_blog{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color:#faf8f0;
+}
+
+
+
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.blog__list {
+    position: sticky;
+}
+.blog__nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 30px;
+    transition: left .3s, color .3s;
+    position: relative;
+    width: 25%;
+    text-align: right;
+}
+
+.blog__trigger {
+    display: none;
+}
+
+.blog__list{
+    max-width: 320px;
+}
+
+.blog__item{
+    margin-bottom: 60px;
+ }
+ 
+.blog__link{
+    color: $articles-color;
+    min-height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    position: relative;
+}
+
+.blog__item_active > .blog__link{
+        color: $green;
+        @include roboto(bold);
+        font-size: 16px;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            width: 3px;
+            background: currentColor;
+        }
+}
+
+
+.blog__articles{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 20px;
+    width: 70%;
+}
+
+.article {
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    &:not(:last-child)::after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        width: 65%;
+        background: rgba($gray, .07);
+        z-index: 1;
+    }
+}
+
+
+
+.article__title {
+    color: $articles-color;
+    font-family: "Sansus Webissimo";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 28px;
+}
+
+.article__date {
+    @include roboto();
+    font-size: 16px;
+    color: rgba($green, .7);
+    line-height: 41px;
+    margin-bottom: 25px;
+}
+
+.article__text p{
+    margin-top: 0;
+}
+.footer__blog > .section__footer {
+    position: relative;
+}
+

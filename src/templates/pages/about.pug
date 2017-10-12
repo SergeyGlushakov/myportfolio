@@ -14,11 +14,11 @@ block content
                 use(xlink:href="/assets/images/icons/sprite.svg#vk")
           li.socials__item
             a.socials__link(href="#")
-              svg.icon.icon_vk
+              svg.icon.icon_git
                 use(xlink:href="/assets/images/icons/sprite.svg#github")
           li.socials__item
             a.socials__link(href="#")
-              svg.icon.icon_vk
+              svg.icon.icon_in
                 use(xlink:href="/assets/images/icons/sprite.svg#in")
 
         nav.navigation.navigation_header
@@ -50,21 +50,21 @@ block content
         svg.icon.icon_slide-down
           use(xlink:href="/assets/images/icons/sprite.svg#arrow_down")
 
-      //- .triangle__wr
-      //-   svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").triangle
-      //-     polygon(points="0,0   0,86   500.8,86   500.8,75.5").triangle__left
-      //-     polygon( points="1000,0   1000,86   500,86   500,75.5").triangle__right
-
     section.section.about(id="down")
       .about__left
-        svg(viewbox="0 0 1000 100" preserveaspectratio="none").triangle
-          polygon(points="0,0   0,86   1000,86  1000,75").triangle__left
-        h2.title.title_about Обо мне
-          svg.title__bg.title__bg_about
-            use(xlink:href="/assets/images/icons/sprite.svg#about_header")
-        .about__info
-          .about__pic
-            img.about__img(src="/assets/images/pic/about.png", alt="Глушаков Сергей")
+        svg(viewbox="0 0 1000 85" preserveaspectratio="none").triangle
+          polygon(points="0,0   0,86   1000.8,86   1000.8,75.5").triangle__left
+
+        .about__left-title
+          h2.title.title_about Обо мне
+          //- svg.title__bg.title__bg_about
+          //-   use(xlink:href="/assets/images/icons/sprite.svg#about_header")
+          //- (style="background-image: url('assets/images/icons/about_header.svg')")
+
+        .about__left-content 
+          .about__info   
+            .about__pic
+              img.about__img(src="/assets/images/pic/about.png", alt="Глушаков Сергей")
             h3.title.title_sub-about Кто я
             .about__text 
               p Я начинающий веб разработчик из Москвы. Мне 34 года. Мне нравится делать интересные и современные проекты.
@@ -72,71 +72,74 @@ block content
 
       .about__right
         svg(viewbox="0 0 1000 85" preserveaspectratio="none").triangle
-          polygon(points="0,0   0,86   1000,86  1000,75").triangle__right
+          polygon( points="1000,0   1000,86   0,86   0,75.5").triangle__right
+
+
         .skills
-        h3.title.title_sub-about Чем я могу быть вам полезен
-        .skills__desc
-              p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-        .skills__list
-          .skills__item
-              .skill__title Frontend
-              ul.skill__list
-                  li.skill__item
-                      svg.skill__circle.skill__circle_html
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name HTML5
-                  li.skill__item
-                      svg.skill__circle.skill__circle_css
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name CSS3
-                  li.skill__item
-                      svg.skill__circle.skill__circle_js
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name JavaScript  & jQuery
-          .skills__item
-              .skill__title Backend
-              ul.skill__list
-                  li.skill__item
-                      svg.skill__circle.skill__circle_php
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name PHP
-                  li.skill__item
-                      svg.skill__circle.skill__circle_sql
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name mySQL
-                  li.skill__item
-                      svg.skill__circle.skill__circle_node
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name Node.js & npm
-                  li.skill__item
-                      svg.skill__circle.skill__circle_mongo
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name Mongo.db
-          .skills__item
-              .skill__title WorkFlow
-              ul.skill__list
-                  li.skill__item
-                      svg.skill__circle.skill__circle_git
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name Git
-                  li.skill__item
-                      svg.skill__circle.skill__circle_gulp
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name Gulp
-                  li.skill__item
-                      svg.skill__circle.skill__circle_yarn
-                          circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
-                          circle.circle.circle_green(r="50px" cx="50%" cy="50%")
-                      span.skill__name Yarn
+          .skills__sub-wr
+            h3.title.title_sub-about Чем я могу быть вам полезен
+          .skills__desc
+            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .skills__list
+            .skills__item
+                .skill__title Frontend
+                ul.skill__list
+                    li.skill__item
+                        svg.skill__circle.skill__circle_html
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name HTML5
+                    li.skill__item
+                        svg.skill__circle.skill__circle_css
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name CSS3
+                    li.skill__item
+                        svg.skill__circle.skill__circle_js
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name JavaScript  & jQuery
+            .skills__item
+                .skill__title Backend
+                ul.skill__list
+                    li.skill__item
+                        svg.skill__circle.skill__circle_php
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name PHP
+                    li.skill__item
+                        svg.skill__circle.skill__circle_sql
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name mySQL
+                    li.skill__item
+                        svg.skill__circle.skill__circle_node
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name Node.js & npm
+                    li.skill__item
+                        svg.skill__circle.skill__circle_mongo
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name Mongo.db
+            .skills__item
+                .skill__title WorkFlow
+                ul.skill__list
+                    li.skill__item
+                        svg.skill__circle.skill__circle_git
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name Git
+                    li.skill__item
+                        svg.skill__circle.skill__circle_gulp
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name Gulp
+                    li.skill__item
+                        svg.skill__circle.skill__circle_webpack
+                            circle.circle.circle_gray(r="50px" cx="50%" cy="50%")
+                            circle.circle.circle_green(r="50px" cx="50%" cy="50%")
+                        span.skill__name Webpack
 
 
     section.map
@@ -147,26 +150,30 @@ block content
           ul.contacts__list
             li.contact__item
               a.contacts__link.contakts__link_skype(href="#")
-                svg.icon.icon_skype
-                  use(xlink:href='/assets/images/icons/sprite.svg#skype')
+                .contact__icon-wr
+                  svg.icon.icon_skype
+                    use(xlink:href='/assets/images/icons/sprite.svg#skype')
                 .contacts__text
                   | Margo301983
             li.contact__item
               a.contacts__link.contakts__link_mail(href="#")
-                svg.icon.icon_mail
-                  use(xlink:href='/assets/images/icons/sprite.svg#envelope2')
+                .contact__icon-wr
+                  svg.icon.icon_mail
+                    use(xlink:href='/assets/images/icons/sprite.svg#envelope2')
                 .contacts__text
                   | sergey_glushakov@mail.ru
             li.contact__item
               a.contacts__link.contakts__link_phone(href="#")
-                svg.icon.icon_phone
-                  use(xlink:href='/assets/images/icons/sprite.svg#phone')
+                .contact__icon-wr
+                  svg.icon.icon_phone
+                    use(xlink:href='/assets/images/icons/sprite.svg#phone')
                 .contacts__text
                   | +79295266240
             li.contact__item
               a.contacts__link.contakts__link_map(href="#")
-                svg.icon.icon_map
-                  use(xlink:href='/assets/images/icons/sprite.svg#map_marker')
+                .contact__icon-wr
+                  svg.icon.icon_map
+                    use(xlink:href='/assets/images/icons/sprite.svg#map_marker')
                 .contacts__text
                   | Москва, проезд Карамзина д.1
 

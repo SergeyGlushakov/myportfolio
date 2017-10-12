@@ -1,0 +1,131 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.skill__title {
+    @include roboto(medium);
+    font-size: rem(28px);
+    color: #566358;
+    margin-bottom: rem(20px);
+  }
+  .skills__list {
+    
+  }
+
+  .skills__sub-wr {
+    display: flex;
+    justify-content: center;
+    padding: 0 295px;
+  }
+  .skills__desc {
+    color: #566358;
+    margin-bottom: rem(60px);
+  }
+  .skill__list {
+    margin-bottom: rem(40px);
+  }
+  .skill__item {
+    margin-right: rem(40px);
+    margin-bottom: rem(20px);
+    &:last-child {
+      margin-right: 0;
+    }
+    display: inline-flex;
+    position: relative;
+}
+  .skill__circle {
+    fill: transparent;
+    width: 125px;
+    height: 125px;
+}
+  
+.circle {
+    stroke-width: 20px;
+    transform: rotate(-90deg);
+    transform-origin: center center;
+}
+.circle_gray {
+    stroke: rgba(#dfdcd5,.5);
+}
+.circle_green {
+    transition: .9s;
+    stroke: $green;
+    stroke-dasharray: 0px 314px;
+  
+}
+.animated {
+    .skill__circle_html {
+      .circle_green {
+        opacity: calc(188/314);
+        stroke-dasharray: 188px 314px;
+      }
+    }
+    .skill__circle_css {
+      .circle_green {
+        opacity: calc(125/314);
+        stroke-dasharray: 125px 314px;
+      }
+    }
+    .skill__circle_js {
+      .circle_green {
+        opacity: calc(141/314);
+        stroke-dasharray: 141px 314px;
+      }
+    }
+    .skill__circle_php {
+      .circle_green {
+        opacity: calc(68/314);
+        stroke-dasharray: 68px 314px;
+      }
+    }
+    .skill__circle_sql {
+      .circle_green {
+        opacity: calc(160/314);
+        stroke-dasharray: 160px 314px;
+      }
+    }
+    .skill__circle_node {
+      .circle_green {
+        opacity: calc(130/314);
+        stroke-dasharray: 130px 314px;
+      }
+    }
+    .skill__circle_mongo {
+      .circle_green {
+        opacity: calc(0/314);
+        stroke-dasharray: 0px 314px;
+      }
+    }
+    .skill__circle_git {
+      .circle_green {
+        opacity: calc(160/314);
+        stroke-dasharray: 160px 314px;
+      }
+    }
+    .skill__circle_gulp {
+      .circle_green {
+        opacity: calc(200/314);
+        stroke-dasharray: 200px 314px;
+      }
+    }
+    .skill__circle_bower {
+      .circle_green {
+        opacity: calc(200/314);
+        stroke-dasharray: 200px 314px;
+      }
+    }
+}
+  
+.skill__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $green;
+    @include roboto(medium);
+    font-size: rem(14px);
+    // width: 80px;
+    // padding: 10px;
+    text-align: center;
+}

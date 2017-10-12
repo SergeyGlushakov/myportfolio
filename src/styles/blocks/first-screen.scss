@@ -6,38 +6,35 @@
 
 // главная секция страницы
 .first-screen {
-    background-color: $bg-color;
-    background-image: url('/assets/images/bg/water.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     min-height: 600px;
     height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.first-screen_about {
     
+    background-image: url('/assets/images/bg/water.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.first-screen_blog {
+    background-image: url('/assets/images/blog_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
 }
 
 //-иконка гамбургера - размеры
 
-.icon_hamburger {
-    width: rem(41px);
-    height: rem(36px);
-    fill: #fff;
-  }
 
-//- всплывающее меню
-  .navigation__list {
+.navigation__wrap {
     display: none;
-  }
-
-
-.icon_slide-down {
-    width: rem(26px);
-    height: rem(16px);
-    fill: rgba(#fff, .7);
-  }
+}
 
 .first-screen__header{
     display: flex;

@@ -1,0 +1,34 @@
+.contacts {
+    width: 380px;
+    // height: 312px;
+    background: rgba($light-white,.85);
+    border-radius: rem(5px);
+    margin: auto;
+    padding: 36px 40px;
+    
+}
+
+.contact__item {
+    margin-bottom: 19px;
+}
+.contacts__link{
+    display: flex;
+    align-items: center;
+    .icon {
+        fill: $light-green;
+    }
+}
+
+.contact__icon-wr{
+    margin-right: 10px;
+    align-self: center;
+}
+
+.contacts__text{
+    @include roboto(medium);
+    color: $subtitle-color;
+}
+
+.contakts__link_skype {
+    margin-top: 36px;
+}
